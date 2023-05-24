@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script>
+        function refreshPage() {
+            location.reload();
+        }
+    </script>
+    <style>
+        .button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h2>Today's Sign Language</h2>
+    <img src="{{ sign.image.url }}" alt="Sign Language Image">
+    <p>{{ sign.name }}</p>
+    <p>{{ sign.description }}</p>
+
+    <div><a class="button" onclick="refreshPage();">다른 표현 더 알아보기</a>
+        <a class="button" id="home-button" href="/">홈으로</a></div>
+</body>
+</html>
