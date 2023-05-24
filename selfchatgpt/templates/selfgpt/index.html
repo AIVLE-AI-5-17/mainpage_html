@@ -1,6 +1,6 @@
 {% load static %}
 {% block extrahead %}
-<link rel="stylesheet" href="{% static 'gtp/style.css' %}">
+{% comment %} <link rel="stylesheet" href="{% static 'gtp/style.css' %}"> {% endcomment %}
 {% endblock %}
 <form action="chat" method="post" entype="application/x-www-form-urlencoded">
     {% csrf_token %}
@@ -11,4 +11,3 @@
     <div><button id="text-button" type="submit" >질문</button></div>
 </form>
 <div><a id="home-button" href="/">홈으로</a></div>
-
