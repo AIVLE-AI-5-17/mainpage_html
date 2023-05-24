@@ -123,8 +123,12 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 STATICFILES_DIRS = [
+<<<<<<< HEAD
     os.path.join(BASE_DIR, 'static'),
     os.path.join(BASE_DIR, 'static/asset'),
+=======
+    os.path.join(BASE_DIR, 'static/'),
+>>>>>>> jaky
 ]
 
 
