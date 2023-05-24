@@ -39,3 +39,9 @@
     <button onclick="addFile()" type="button">파일 추가 </button>
     <div><input type="submit" value="ChatGPT에게 수어로 문의하기"></div>
 </form>
+
+{% if error_message %}
+  <script>
+    alert("{{ error_message }}");
+  </script>
+{% endif %}
