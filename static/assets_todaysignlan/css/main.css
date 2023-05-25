@@ -97,7 +97,9 @@ input, select, textarea {
       font-weight: 300;
       line-height: 1.75em;
       color: #000000;
-   }s
+      margin-left: 500px;
+      margin-top: 120px;
+   }
 
       body.is-preload *, body.is-preload *:before, body.is-preload *:after {
          -moz-animation: none !important;
@@ -181,6 +183,11 @@ input, select, textarea {
       transition: color 0.35s ease-in-out, border-bottom-color 0.35s ease-in-out;
       outline: 0;
    }
+
+      a:hover {
+         color: #E27689;
+         border-bottom-color: rgba(255, 255, 255, 0);
+      }
 
    sub {
       position: relative;

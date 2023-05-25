@@ -35,7 +35,7 @@
 								<li><a href="#top" id="top-link"><span class="icon solid fa-home">Main</span></a></li>
 								<li><a href="#portfolio" id="portfolio-link"><span class="icon solid fa-th">Service</span></a></li>
 								<li><a href="#about" id="about-link"><span class="icon solid fa-user">About us</span></a></li>
-								<li><a href="#contact" id="about-link"><span class="icon solid fa-user">Comment</span></a></li>
+								<li><a href="#contact" id="comment-link"><span class="icon solid fa-user">Comment</span></a></li>
 							</ul>
 						</nav>
 
@@ -221,13 +221,20 @@
 			</div>
 
 		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
+			{% comment %} <script src="assets/js/jquery.min.js"></script>
 			<script src="assets/js/jquery.scrolly.min.js"></script>
 			<script src="assets/js/jquery.scrollex.min.js"></script>
 			<script src="assets/js/browser.min.js"></script>
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
+			<script src="assets/js/main.js"></script> {% endcomment %}
 
+			<script src="{% static 'assets/js/jquery.min.js' %}"></script>			
+			<script src="{% static 'assets/js/jquery.scrolly.min.js' %}"></script>		
+			<script src="{% static 'assets/js/jquery.scrollex.min.js' %}"></script>	
+			<script src="{% static 'assets/js/browser.min.js' %}"></script>		
+			<script src="{% static 'assets/js/breakpoints.min.js' %}"></script>		
+			<script src="{% static 'assets/js/util.js' %}"></script>		
+			<script src="{% static 'assets/js/main.js' %}"></script>		
 	</body>
 </html>
