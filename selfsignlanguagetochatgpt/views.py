@@ -29,7 +29,7 @@ def index(request):
     return render(request, 'selflanguagechat/index.html')
 
 def chat(request):
-    if request.method == 'POST' and request.FILES['files']:
+    if request.method == 'POST' and request.FILES.get('files'):
 
         results=[]
         #form에서 전송한 파일을 획득한다.
@@ -102,12 +102,11 @@ def chat(request):
         content = chatGPT(selectedChatResult.prompt)
         selectedChatResult.content = content
         selectedChatResult.save()
-        
-     
-
+    
         context = {
         'question': selectedChatResult.prompt,
         'result': selectedChatResult.content
     }
-
-    return render(request, 'selflanguagechat/result.html', context)  
+        return render(request, 'selflanguagechat/result.html', context)  
+    else:
+        return render(request, 'selflanguagechat/index.html', {'error_message': 'No file uploaded. Please select a file.'})

@@ -56,9 +56,16 @@
       <input name="files" type="file" />
     </fieldset>
   </span>
-  <button onclick="addFile()" type="button">파일 추가</button>
-  <div><input type="submit" value="업로드" /></div>
+    <button onclick="addFile()" type="button">파일 추가 </button>
+    <div><input type="submit" value="ChatGPT에게 수어로 문의하기"></div>
 </form>
+
+{% if error_message %}
+  <script>
+    alert("{{ error_message }}");
+  </script>
+{% endif %}
+
 <style>
   h1 {
     color: #09a47f;
