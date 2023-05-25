@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'selfchatgpt',
     'selfsignlanguagetochatgpt',
     'todaysignlan',
+    'alphabet_to_video',
     'django_extensions',
 ]
 

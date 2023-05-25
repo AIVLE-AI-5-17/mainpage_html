@@ -1,14 +1,11 @@
 <!DOCTYPE html>
 <html>
 <head>
-<<<<<<< HEAD
-=======
     {% load static %}
     <title>Today's Sign Language</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
     <link rel="stylesheet" href="{% static 'assets_todaysignlan/css/main.css' %}" />
->>>>>>> jaky
     <script>
         function refreshPage() {
             location.reload();
@@ -18,23 +15,14 @@
         .button {
             display: inline-block;
             padding: 10px 20px;
-<<<<<<< HEAD
-            background-color: #4CAF50;
-            color: white;
-=======
             background-color: #C3E7E7;
             color: #262341;
->>>>>>> jaky
             text-decoration: none;
             border-radius: 5px;
             cursor: pointer;
         }
     </style>
 </head>
-<<<<<<< HEAD
-<body>
-    <h2>Today's Sign Language</h2>
-=======
 
 
 <body>
@@ -57,13 +45,13 @@
                         <li><a href="/selfchatgpt/" id="portfolio-link"><span class="icon solid fa-th">채팅으로 문의하기</span></a></li>
                         <li><a href="/selfsignlanguagetochatgpt/" id="about-link"><span class="icon solid fa-user">수어로 문의하기</span></a></li>
                         <li><a href="/todaysignlan/" id="about-link"><span class="icon solid fa-user">오늘의 수어</span></a></li>
+                        <li><a href="/alphabet_to_video/" id="about-link"><span class="icon solid fa-user">알파벳 지문자</span></a></li>
                     </ul>
                 </nav>
 
         </div>
 
     </div>
->>>>>>> jaky
     <img src="{{ sign.image.url }}" alt="Sign Language Image">
     <p>{{ sign.name }}</p>
     <p>{{ sign.description }}</p>

@@ -2250,6 +2250,9 @@ input, select, textarea {
                #nav ul li a.active span:before {
                   color: #e27689;
                }
+            #nav ul li a span:before {
+               display: none;
+            }
 
 /* Footer */
 
