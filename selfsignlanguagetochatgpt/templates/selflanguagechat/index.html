@@ -1,5 +1,54 @@
-{% load static %} {% block extrahead %}
-<link rel="stylesheet" href="{% static 'languagechat/style.css' %}" />
+{% comment %} {% load static %} {% block extrahead %}
+<link rel="stylesheet" href="{% static 'languagechat/style.css' %}" /> {% endcomment %}
+
+<!DOCTYPE HTML>
+<!--
+   Prologue by HTML5 UP
+   html5up.net | @ajlkn
+   Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+
+{% load static %}
+{% block extrahead %}
+    <head>
+    <title>채팅으로 문의하기</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    {% comment %} <link rel="stylesheet" href="assets/css/main.css" /> {% endcomment %}
+    <link rel="stylesheet" href="{% static 'assets_selfgpt/css/main_gpt.css' %}" />
+    </head>
+
+{% endblock %}
+
+<body class="is-preload">
+<!-- Header -->
+    <div id="header">
+
+    <div class="top">
+
+        <!-- Logo -->
+            <div id="logo">
+                <span class="image avatar48"><img src="{% static "assets/css/images/logo.png" %}" alt="" /></span>
+                <h1 id="title">AIVLE School</h1>
+                <h3>17조</h3>
+            </div>
+
+    <!-- Nav -->
+        <nav id="nav">
+            <ul>
+                <li><a href="/" id="top-link"><span class="icon solid fa-home">Main</span></a></li>
+                <li><a href="/selfchatgpt/" id="portfolio-link"><span class="icon solid fa-th">채팅으로 문의하기</span></a></li>
+                <li><a href="/selfsignlanguagetochatgpt/" id="about-link"><span class="icon solid fa-user">수어로 문의하기</span></a></li>
+                <li><a href="/todaysignlan/" id="about-link"><span class="icon solid fa-user">오늘의 수어</span></a></li>
+                <li><a href="/alphabet_to_video/" id="about-link"><span class="icon solid fa-user">알파벳 지문자</span></a></li>
+            </ul>
+        </nav>
+    
+    </div>
+</div>
+
+
 <script>
   let idNum = 0;
   function addFile() {
@@ -38,7 +87,17 @@
 
 }
 </script>
-{% endblock %}
+{% comment %} {% endblock %} {% endcomment %}
+<!-- Main -->
+    <div id="main">
+      <header>
+          <h3>
+              <span class='highlight'>chatGPT에게 채팅으로 문의하기</span>
+          </h3>
+      </header>
+  
+      <div class="row">
+          <div class="col-12">
 <form action="chat" method="post" enctype="multipart/form-data">
   <a href="/"
     ><img
@@ -75,6 +134,8 @@
     <button onclick="takePhoto()" type="button">캡쳐</button>
     <div><input type="submit" value="ChatGPT에게 수어로 문의하기"></div>
 </form>
+</div>
+</div>
 
 {% if error_message %}
   <script>
@@ -82,9 +143,25 @@
   </script>
 {% endif %}
 
+<br>
+         
+<!-- Footer -->
+   <div id="footer">
+
+      <!-- Copyright -->
+         <ul class="copyright">
+            <li>&copy; Untitled. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP & 17조 활용</a></li>
+         </ul>
+
+   </div>
+
+</body>
+
+</html>
+
 <style>
   h1 {
-    color: #09a47f;
+    color: #262341;
   }
   fieldset {
     border-width: 1px;
@@ -95,7 +172,7 @@
     color: #bfbfbf;
   }
   input[type="file"]::file-selector-button {
-    background-color: #09a47f;
+    background-color: #262341;
     color: white;
     border-color: #bfbfbf;
     width: 200px;
@@ -103,18 +180,19 @@
     border-radius: 4px;
     border-width: 1px;
     margin-top: 10px;
+    margin-left: 10px;
     border: solid 1px;
   }
-  body {
+  {% comment %} body {
     width: 100%;
     display: flex;
     justify-content: center;
-  }
-  button {
+  } {% endcomment %}
+  {% comment %} button {
     margin-top: 20px;
-  }
-  div > input {
-    background-color: #09a47f;
+  } {% endcomment %}
+  {% comment %} div > input {
+    background-color: #262341;
     color: white;
     margin-top: 20px;
     width: 425px;
@@ -123,5 +201,5 @@
     border-radius: 4px;
     border-color: #bfbfbf;
     height: 40px;
-  }
+  } {% endcomment %}
 </style>

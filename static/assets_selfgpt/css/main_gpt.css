@@ -2016,16 +2016,21 @@ input, select, textarea {
       display: inline-block;
       border-radius: 0.35em;
       color: #fff;
+      font-family: 'HS-Regular';
       text-decoration: none;
+      font-weight: 400;
+      font-weight: 400;
       padding: 0.5em 1.55em 0.5em 1.55em;
       background-color: #262341;
-      border: 0;
+      /* border: 0; */
       cursor: pointer;
       -moz-transition: background-color 0.35s ease-in-out;
       -webkit-transition: background-color 0.35s ease-in-out;
       -ms-transition: background-color 0.35s ease-in-out;
       transition: background-color 0.35s ease-in-out;
-      margin-left: 800px;
+      /* margin-left: 800px; */
+      font-size: 15pt;
+      margin-top: 15px;
    }
 
       input[type="button"]:hover,
