@@ -29,6 +29,7 @@ urlpatterns = [
     # path('signlanguagetochatgpt/',include('signlanguagetochatgpt.urls')),
     path('selfsignlanguagetochatgpt/',include('selfsignlanguagetochatgpt.urls')),
     path('todaysignlan/',include('todaysignlan.urls')),
+    path('alphabet_to_video/',include('alphabet_to_video.urls')),
 ]
 
 from django.conf import settings

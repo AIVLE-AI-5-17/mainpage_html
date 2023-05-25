@@ -31,6 +31,7 @@ ALLOWED_HOSTS = ['*']
 # Application definition
 
 INSTALLED_APPS = [
+    # 'django_extensions',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -40,8 +41,12 @@ INSTALLED_APPS = [
     'selfchatgpt',
     'selfsignlanguagetochatgpt',
     'todaysignlan',
+    'alphabet_to_video',
     'django_extensions',
+    # 'sslserver',
 ]
+
+#  python manage.py runsslserver --certificate django.crt --key django.key
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',

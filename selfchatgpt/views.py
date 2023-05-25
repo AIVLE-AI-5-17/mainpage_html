@@ -2,11 +2,7 @@ from django.shortcuts import render
 import openai
 # Create your views here.
 
-<<<<<<< HEAD
-openai.api_key = ""
-=======
 openai.api_key = "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"
->>>>>>> jaky
 
 
 #chatGPT에게 채팅 요청 API
@@ -45,4 +41,4 @@ def chat(request):
         'result': result
     }
 
-    return render(request, 'selfgpt/result.html', context) 
+    return render(request, 'selfgpt/result.html', context)
