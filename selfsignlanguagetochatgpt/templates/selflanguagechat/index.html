@@ -22,6 +22,21 @@
     // 복사한 노드 붙여넣기
     fileModule.after(newNode);
   }
+  
+  function takePhoto() {
+    const video = document.querySelector("#videoElement");
+    const canvas = document.createElement("canvas");
+    canvas.width = video.videoWidth;
+    canvas.height = video.videoHeight;
+    canvas.getContext("2d").drawImage(video, 0, 0, canvas.width, canvas.height);
+    const dataURL = canvas.toDataURL("image/png");
+    const a = document.createElement("a");
+    a.href = dataURL;
+    a.download = "capture.png";
+    a.click();
+    // 또는 const fileInput = $("#fileUpload").get(0);
+
+}
 </script>
 {% endblock %}
 <form action="chat" method="post" enctype="multipart/form-data">
@@ -57,6 +72,7 @@
     </fieldset>
   </span>
     <button onclick="addFile()" type="button">파일 추가 </button>
+    <button onclick="takePhoto()" type="button">캡쳐</button>
     <div><input type="submit" value="ChatGPT에게 수어로 문의하기"></div>
 </form>
 
