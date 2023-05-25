@@ -1,41 +1,61 @@
-{% load static %}
-{% block extrahead %}
-<link rel="stylesheet" href="{% static 'selflanguagechat/style.css' %}">
+{% load static %} {% block extrahead %}
+<link rel="stylesheet" href="{% static 'languagechat/style.css' %}" />
 <script>
-    let idNum = 0;
-    function addFile(){
-        deepCopy();
-    }
+  let idNum = 0;
+  function addFile() {
+    deepCopy();
+  }
 
-    function deepCopy()  {
-      // 'test' node 선택
-      const fileModule = document.getElementById('file-module-'+idNum);
+  function deepCopy() {
+    // 'test' node 선택
+    const fileModule = document.getElementById("file-module-" + idNum);
 
+    // 노드 복사하기 (deep copy)
+    const newNode = fileModule.cloneNode(true);
 
+    console.log(newNode);
 
-      // 노드 복사하기 (deep copy)
-      const newNode = fileModule.cloneNode(true);
+    // 복사된 Node id 변경하기
+    idNum++;
+    newNode.id = "file-module-" + idNum;
 
-      console.log(newNode)
-
-      // 복사된 Node id 변경하기
-      idNum++;
-      newNode.id = 'file-module-' + idNum;
-
-      // 복사한 노드 붙여넣기
-      fileModule.after(newNode);
-    }
+    // 복사한 노드 붙여넣기
+    fileModule.after(newNode);
+  }
 </script>
 {% endblock %}
 <form action="chat" method="post" enctype="multipart/form-data">
-    {% csrf_token %}
-    <span id="file-module-0">
-        <fieldset>
-            <legend><h1>파일 업로드</h1></legend>
-            <input name="files" type="file">
+  <a href="/"
+    ><img
+      src="https://cdn-icons-png.flaticon.com/512/25/25694.png"
+      width="45"
+      height="45"
+  /></a>
+  {% csrf_token %}
+  <div id="container">
+    <video autoplay="true" id="videoElement"></video>
 
-        </fieldset>
-    </span>
+    <script>
+      var video = document.querySelector("#videoElement");
+
+      if (navigator.mediaDevices.getUserMedia) {
+        navigator.mediaDevices
+          .getUserMedia({ video: true })
+          .then(function (stream) {
+            video.srcObject = stream;
+          })
+          .catch(function (err0r) {
+            console.log("Something went wrong!");
+          });
+      }
+    </script>
+  </div>
+  <span id="file-module-0">
+    <fieldset>
+      <legend><h1>파일 업로드</h1></legend>
+      <input name="files" type="file" />
+    </fieldset>
+  </span>
     <button onclick="addFile()" type="button">파일 추가 </button>
     <div><input type="submit" value="ChatGPT에게 수어로 문의하기"></div>
 </form>
@@ -45,3 +65,47 @@
     alert("{{ error_message }}");
   </script>
 {% endif %}
+
+<style>
+  h1 {
+    color: #09a47f;
+  }
+  fieldset {
+    border-width: 1px;
+    border-radius: 4px;
+    border: solid 1px #bfbfbf;
+  }
+  input[type="file"] {
+    color: #bfbfbf;
+  }
+  input[type="file"]::file-selector-button {
+    background-color: #09a47f;
+    color: white;
+    border-color: #bfbfbf;
+    width: 200px;
+    height: 40px;
+    border-radius: 4px;
+    border-width: 1px;
+    margin-top: 10px;
+    border: solid 1px;
+  }
+  body {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+  button {
+    margin-top: 20px;
+  }
+  div > input {
+    background-color: #09a47f;
+    color: white;
+    margin-top: 20px;
+    width: 425px;
+    border: solid 1px;
+    border-width: 1px;
+    border-radius: 4px;
+    border-color: #bfbfbf;
+    height: 40px;
+  }
+</style>
