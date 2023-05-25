@@ -43,7 +43,7 @@ INSTALLED_APPS = [
     'todaysignlan',
     'alphabet_to_video',
     'django_extensions',
-    'sslserver',
+    # 'sslserver',
 ]
 
 #  python manage.py runsslserver --certificate django.crt --key django.key
