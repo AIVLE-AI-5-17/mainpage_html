@@ -2,3 +2,5 @@
 .DS_Store
 .crt
 .key
+django.key
+django.crt
