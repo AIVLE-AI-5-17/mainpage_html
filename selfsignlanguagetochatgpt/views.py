@@ -8,7 +8,7 @@ import cv2
 import string
 import mlflow
 import mlflow.keras
-from chatgpt.views import chatGPT
+from selfchatgpt.views import chatGPT
 logger = logging.getLogger('mylogger')
 #signlanguage/models.py의 Result 모델을 import한다.
 from .models import ChatResult, Result

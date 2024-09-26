@@ -11,8 +11,8 @@
 		<title>챗GPT 기반 수어 번역 서비스</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		{% comment %} <link rel="stylesheet" href="{% static 'asset/css/main.css' %}" /> {% endcomment %}
-        <link rel="stylesheet" type="text/css" href="{% static 'asset/css/main.css' %}">
+		<link rel="stylesheet" href="{% static 'assets/css/main.css' %}" />
+        {% comment %} <link rel="stylesheet" type="text/css" href="{% static 'asset/css/main.css' %}"> {% endcomment %}
         
 	</head>
 	<body class="is-preload">
@@ -24,7 +24,7 @@
 
 					<!-- Logo -->
 						<div id="logo">
-							<span class="image avatar48"><img src="images/logo.png" alt="" /></span>
+							<span class="image avatar48"><img src='{% static "assets/css/images/logo.png" %}' alt="" /></span>
 							<h1 id="title">AIVLE School</h1>
 							<h3>17조</h3>
 						</div>
@@ -35,7 +35,7 @@
 								<li><a href="#top" id="top-link"><span class="icon solid fa-home">Main</span></a></li>
 								<li><a href="#portfolio" id="portfolio-link"><span class="icon solid fa-th">Service</span></a></li>
 								<li><a href="#about" id="about-link"><span class="icon solid fa-user">About us</span></a></li>
-								<li><a href="#contact" id="about-link"><span class="icon solid fa-user">Comment</span></a></li>
+								<li><a href="#contact" id="comment-link"><span class="icon solid fa-user">Comment</span></a></li>
 							</ul>
 						</nav>
 
@@ -74,26 +74,41 @@
 							<div class="row">
 								<div class="col-4 col-12-mobile">
 									<article class="service_item">
-										<a class="image fit"><img src="images/fla01.png" alt="" /></a>
+										{% comment %} <a class="image fit"><img src= '../static/assets/css/images/fla01.png' alt="" /></a> {% endcomment %}
+										<a class="image fit"><img src= '{% static "assets/css/images/fla01.png" %}' alt="" /></a>
+										
 									</article>
+									<br>
 									<article class="service_btn">
 										<a href="selfchatgpt/" class="button scrolly first"><b>채팅으로 문의하기</b></a>
 									</article>
 								</div>
 								<div class="col-4 col-12-mobile">
 									<article class="service_item">
-										<a class="image fit"><img src="images/fla03.png" alt="" /></a>
+										{% comment %} <a class="image fit"><img src="images/fla03.png" alt="" /></a> {% endcomment %}
+										<a class="image fit"><img src='{% static "assets/css/images/fla03.png" %}' alt="" /></a>
 									</article>
+									<br>
 									<article class="service_btn">
 										<a href="selfsignlanguagetochatgpt/" class="button scrolly"><b>수어로 문의하기</b></a>
 									</article>
 								</div>
 								<div class="col-4 col-12-mobile">
 									<article class="service_item">
-										<a class="image fit"><img src="images/fla02.png" alt="" /></a>
+										<a class="image fit"><img src='{% static "assets/css/images/fla02.png" %}' alt="" /></a>
 									</article>
+									<br>
 									<article class="service_btn">
 										<a href="todaysignlan/" class="button scrolly"><b>오늘의 수어</b></a>
+									</article>
+								</div>
+								<div class="col-4 col-12-mobile">
+									<article class="service_item">
+										<a class="image fit"><img src='{% static "assets/css/images/video.png" %}' alt="" /></a>
+									</article>
+									<br>
+									<article class="service_btn">
+										<a href="alphabet_to_video/" class="button scrolly"><b> 알파벳 수어 배우기 </b></a>
 									</article>
 								</div>
 							</div>
@@ -112,7 +127,7 @@
 							<h3>KT AIVLE School AI 5반 17조</h3>
 							<p> AI 개발자로 성장하기 위해 열심히 프로젝트 중입니다! 집에 갈래~</p>
 
-							<a href="#" class="image featured"><img src="images/we.png" alt="" /></a>
+							<a href="#" class="image featured"><img src='{% static "assets/css/images/we.png" %}' alt="" /></a>
 
                             <div class="row">
 								<div class="col-4 col-12-mobile">
@@ -141,7 +156,7 @@
 								</div>
                                 <div class="col-4 col-12-mobile">
 									<article class="item">
-										<!-- <a href="#" class="image fit"><img src="images/pic02.jpg" alt="" /></a> -->
+										<!-- <a href="#" class="image fit"><img src="images/pic02.	" alt="" /></a> -->
 										<header>
 											<h3>신윤하</h3>
 										</header>
@@ -218,13 +233,20 @@
 			</div>
 
 		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
+			{% comment %} <script src="assets/js/jquery.min.js"></script>
 			<script src="assets/js/jquery.scrolly.min.js"></script>
 			<script src="assets/js/jquery.scrollex.min.js"></script>
 			<script src="assets/js/browser.min.js"></script>
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
+			<script src="assets/js/main.js"></script> {% endcomment %}
 
+			<script src="{% static 'assets/js/jquery.min.js' %}"></script>			
+			<script src="{% static 'assets/js/jquery.scrolly.min.js' %}"></script>		
+			<script src="{% static 'assets/js/jquery.scrollex.min.js' %}"></script>	
+			<script src="{% static 'assets/js/browser.min.js' %}"></script>		
+			<script src="{% static 'assets/js/breakpoints.min.js' %}"></script>		
+			<script src="{% static 'assets/js/util.js' %}"></script>		
+			<script src="{% static 'assets/js/main.js' %}"></script>		
 	</body>
 </html>
